@@ -1,0 +1,19 @@
+{
+  "name": "redux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "asyncActions.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon asyncActions.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.2.3",
+    "nodemon": "^2.0.20",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.2"
+  }
+}

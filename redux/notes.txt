@@ -1,0 +1,31 @@
+Core concepts of Redux
+    : Store that holds the state of your application
+    : Action that describe the changes in the state of the application
+    : Reducer which actually carries out the state the transition depending on the action
+
+Principle of Redux
+    Redux Store -> (subscribe) -> Javascript App -> (dispatch) -> Action -> Reducer -> manage the state -> Redux Store
+
+Applying Middlewrare in Redux
+    export applyMiddleware method from redux.applyMiddleware
+    and then , simplt use in it applyMiddleware(middlewarename) inside createStore
+    For Example 
+    const applyMiddleware = redux.applyMiddleware
+    const store = createStore(rootReducer , applyMiddleware(logger))
+
+Async Actions  
+    state : {
+        loading : true,
+        data : [],
+        error : ''
+    }
+    Actions: 
+        FETCH_USERS_REQUEST - FETCH ALL USERS FROM API
+        FETCH_USERS_SUCESS - FETCH SUCESSFULLY
+        FETCH_USERS_FAILURE - ERRORS IN FETCHING 
+    Reducer:
+        FETCH_USERS_FAILURE : loading: false , error : error
+        FETCH_USERS_REQUEST: loading: true
+        FETCH_USERS_SUCESS: loading : false , data = response from api
+
+    // here we can use axios and redux thunk 
